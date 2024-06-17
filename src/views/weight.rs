@@ -12,7 +12,7 @@ pub fn Weight() -> impl IntoView {
 
     view! {
       <div class="h-full flex flex-col">
-        <TimeSeriesPlot/>
+        <TimeSeriesPlot data=data/>
         <DataManager data=data data_type=DataType::Weight unit="lbs".to_string()/>
       </div>
     }

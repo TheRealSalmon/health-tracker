@@ -12,7 +12,7 @@ pub fn Temperature() -> impl IntoView {
 
     view! {
       <div class="h-full flex flex-col">
-        <TimeSeriesPlot/>
+        <TimeSeriesPlot data=data/>
         <DataManager data=data data_type=DataType::Temperature unit="°F".to_string()/>
       </div>
     }
