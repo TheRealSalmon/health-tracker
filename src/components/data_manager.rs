@@ -98,7 +98,7 @@ pub fn DataManager(
             </button>
           </div>
         </div>
-        <div class="h-36 w-2/3 overflow-auto flex flex-col p-2">
+        <div class="no-scrollbar h-36 w-2/3 overflow-auto flex flex-col p-2">
           <Transition fallback=move || {
               view! { <p>"Loading Data"</p> }
           }>{move || { data.get().map(|data| data_to_view(&data)) }}</Transition>
