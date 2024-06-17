@@ -8,8 +8,8 @@ pub fn TimeSeriesPlot(data: Resource<(), Vec<Data>>) -> impl IntoView {
         let values: Vec<_> = slice_data.iter().map(|d| d.value).collect();
 
         view! {
-            <p>{format!("{:?}", timestamps)}</p>
-            <p>{format!("{:?}", values)}</p>
+          <p>{format!("{:?}", timestamps)}</p>
+          <p>{format!("{:?}", values)}</p>
         }
     };
 
@@ -17,10 +17,7 @@ pub fn TimeSeriesPlot(data: Resource<(), Vec<Data>>) -> impl IntoView {
       <div class="grow">
         <Transition fallback=move || {
             view! { <p>"Loading Data"</p> }
-        }>
-          {move || {
-            data.get().map(|data| data_to_view(&data))
-          }}
+        }>{move || { data.get().map(|data| data_to_view(&data)) }}
         </Transition>
       </div>
     }
