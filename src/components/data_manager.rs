@@ -4,7 +4,11 @@ use leptos::*;
 use leptos_icons::Icon;
 
 #[component]
-pub fn DataManager(data: Resource<(), Vec<Data>>, data_type: DataType, unit: String) -> impl IntoView {
+pub fn DataManager(
+    data: Resource<(), Vec<Data>>,
+    data_type: DataType,
+    unit: String,
+) -> impl IntoView {
     let (value, set_value) = create_signal("".to_string());
     let (show_parse_error, set_show_parse_error) = create_signal(false);
 

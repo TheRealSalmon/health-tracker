@@ -2,10 +2,10 @@ use rusqlite::Connection;
 
 pub fn db_init() {
     let db_path_string = get_db_path();
-    
+
     let db_path = std::path::Path::new(&db_path_string);
     let db_dir = db_path.parent().unwrap();
-    
+
     // TODO: remove, for developing
     std::fs::remove_file(db_path).unwrap();
 
@@ -37,12 +37,7 @@ pub fn db_init() {
                 unit
             )
             VALUES (?1, ?2, ?3, ?4)",
-            (
-                d.0.to_string(),
-                d.1.to_string(),
-                d.2,
-                d.3.to_string(),
-            ),
+            (d.0.to_string(), d.1.to_string(), d.2, d.3.to_string()),
         )
         .unwrap();
     }

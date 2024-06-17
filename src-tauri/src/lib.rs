@@ -57,13 +57,7 @@ fn submit_data(datatype: &str, timestamp: &str, value: f64, unit: &str) {
     let data_type = datatype;
 
     // TODO: remove, for developing
-    println!(
-        "{}, {}, {}, {}",
-        data_type,
-        timestamp,
-        value,
-        unit,
-    );
+    println!("{}, {}, {}, {}", data_type, timestamp, value, unit,);
 
     let con = get_con();
     con.execute(
