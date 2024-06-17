@@ -8,13 +8,13 @@ use crate::utils::DataType;
 
 #[derive(Deserialize, Serialize)]
 pub struct GetDataArgs {
-    datatype: String,
+    data_type: String,
 }
 
 impl GetDataArgs {
     pub fn new(data_type: DataType) -> Self {
         Self {
-            datatype: data_type.to_string(),
+            data_type: data_type.to_string(),
         }
     }
 }

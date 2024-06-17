@@ -8,5 +8,5 @@ This template should help get you started developing with Tauri and Leptos.
 
 ## Format code
 ```bash
-cargo fmt && leptosfmt ./src/**/*.rs
+cargo fmt && leptosfmt -t 2 ./src/**/*.rs
 ```

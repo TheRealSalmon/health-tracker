@@ -8,10 +8,8 @@ fn println(s: &str) {
     println!("{s}");
 }
 
-#[command]
-fn get_data(datatype: &str) -> String {
-    let data_type = datatype;
-
+#[command(rename_all = "snake_case")]
+fn get_data(data_type: &str) -> String {
     let mut array = json::array![];
     let con = get_con();
     let mut statement = con
@@ -52,10 +50,8 @@ fn get_data(datatype: &str) -> String {
     json::stringify(array)
 }
 
-#[command]
-fn submit_data(datatype: &str, timestamp: &str, value: f64, unit: &str) {
-    let data_type = datatype;
-
+#[command(rename_all = "snake_case")]
+fn submit_data(data_type: &str, timestamp: &str, value: f64, unit: &str) {
     // TODO: remove, for developing
     println!("{}, {}, {}, {}", data_type, timestamp, value, unit,);
 

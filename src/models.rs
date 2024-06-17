@@ -10,3 +10,14 @@ pub struct Data {
     pub value: f64,
     pub unit: String,
 }
+
+impl Data {
+    pub fn new(data_type: DataType, timestamp: DateTime<Utc>, value: f64, unit: String) -> Self {
+        Self {
+            data_type,
+            timestamp,
+            value,
+            unit,
+        }
+    }
+}

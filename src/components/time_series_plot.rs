@@ -17,8 +17,7 @@ pub fn TimeSeriesPlot(data: Resource<(), Vec<Data>>) -> impl IntoView {
       <div class="grow">
         <Transition fallback=move || {
             view! { <p>"Loading Data"</p> }
-        }>{move || { data.get().map(|data| data_to_view(&data)) }}
-        </Transition>
+        }>{move || { data.get().map(|data| data_to_view(&data)) }}</Transition>
       </div>
     }
 }
