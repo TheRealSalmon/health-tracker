@@ -21,7 +21,7 @@ pub fn DataManager(
     };
 
     view! {
-      <div class="h-36 flex flex-row border-t-2 border-slate-400">
+      <div class="absolute bottom-0 right-0 h-1/3 w-4/5 flex flex-row border-t-2 border-slate-400">
         <div class="w-1/3 flex flex-col items-center place-content-center space-y-4 p-2 border-r-2 border-slate-400">
           <InputValue value=value set_value=set_value placeholder=placeholder unit=unit.clone()/>
           <div class="flex flex-row space-x-2">
